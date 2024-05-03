@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 import json
+
+import os
+print(os.getcwd())
  
 from src.utils.sentence_prediction import process_sentence, from_str_to_list, tags
 from src.utils.model_trained import model_prediction
