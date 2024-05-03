@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 import json
  
-from src.utils.sentence_prediction import process_sentence, from_str_to_list, tags
-from src.utils.model_trained import model_prediction
-from src.utils.embedding import use_embed
+from utils.sentence_prediction import process_sentence, from_str_to_list, tags
+from utils.model_trained import model_prediction
+from utils.embedding import use_embed
 
 app = FastAPI()
 
