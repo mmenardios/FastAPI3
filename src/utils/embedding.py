@@ -13,4 +13,4 @@ def use_embed(input_sentence):
     Fonction créant un embedding de la question de l'utilisateur grâce à 
 un Universal Sentence Encoder
     """
-    return use_loaded_model(input_sentence
+    return use_loaded_model(input_sentence)
