@@ -6,7 +6,7 @@ import os
 
 print(os.getcwd())
 
-from utils.embedding import use_embed
+#from utils.embedding import use_embed
 
 class Input(BaseModel):
     text: str
