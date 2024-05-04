@@ -1,6 +1,12 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+import json
+import os
+
+print(os.getcwd())
+
+from src.utils.embedding import use_embed
 
 class Input(BaseModel):
     text: str
