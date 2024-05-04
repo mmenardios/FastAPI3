@@ -1,34 +1,40 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
+
 import json
 
 import os
 print(os.getcwd())
  
-from src.utils.sentence_prediction import process_sentence, from_str_to_list, tags
-from src.utils.model_trained import model_prediction
-from src.utils.embedding import use_embed
+ class Input(BaseModel):
+    text: str
+ 
+#from src.utils.sentence_prediction import process_sentence, from_str_to_list, tags
+#from src.utils.model_trained import model_prediction
+#from src.utils.embedding import use_embed
 
 app = FastAPI()
 
 
-@app.get("/greet")
-async def greet():
+@app.get("/")
+async def main():
     return {"message": "Hello World !"}
 
 
 @app.post("/predict")
-async def prediction(sentence: dict):
+#async def prediction(sentence: dict):
+async def submit(input: Input):
     # Turns the json input into a string object
-    string_sentence = json.dumps(sentence)
+    #string_sentence = json.dumps(sentence)
 
     # process_sentence needs a string objet, and use_embed needs a list object
-    processed_sentence = process_sentence(string_sentence)
+    #processed_sentence = process_sentence(string_sentence)
 
     # Suppression du premier mot "sentence" de la chaine de caractère
-    words = processed_sentence.split(maxsplit=1)
-    result_string = words[1]
+    #words = processed_sentence.split(maxsplit=1)
+    #result_string = words[1]
 
-    list_sentence = from_str_to_list(result_string)
+    #list_sentence = from_str_to_list(result_string)
 
     #embedded_sentence = use_embed(list_sentence)
 
