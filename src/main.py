@@ -10,7 +10,7 @@ from utils.embedding import use_embed
 
 class Input(BaseModel):
     text: str
-
+ 
 
 # Define the app
 app = FastAPI(
