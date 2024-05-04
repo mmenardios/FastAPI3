@@ -232,3 +232,4 @@ fabric.properties
 
 # Custom
 .idea
+.DS_Store
